@@ -1,0 +1,16 @@
+{%  extends 'base.html' %}
+
+
+{% block content %}
+
+<form method="POST">
+  {% csrf_token %} <!--To validate the screen (security)-->
+  {{ form.as_p}} <!--To check for errors, This is a paragraph tag though-->
+
+  <button class="btn-btn-primary" type="submit">
+    Submit
+  </button>
+</form>
+
+
+{% endblock %}
